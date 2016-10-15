@@ -16,28 +16,30 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
             </div>
             <div class="navbar-collapse collapse">
+                <img src="~/IMG/logo.png" class="logo" />
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+            
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <div style="overflow:hidden;" >
-               
-                    <p style="align-content:space-between"><img src="~/IMG/pb_logo.jpg" style="align-content:flex-start"/>&copy; @DateTime.Now.Year - Projekt zrealizowany przez Marcin Kozikowski i Marcin Januszewski 2016r.<img src="~/IMG/mvc_logo.png" style="align-content:flex-end"/></p>
-                
-            </div>
+                <ul id="footer-left">
+                    <li><img src="~/IMG/pb_logo.jpg" style="align-content:flex-start" height="100" /></li>
+                    <li>&copy; @DateTime.Now.Year - Projekt zrealizowany przez Marcin Kozikowski i Marcin Januszewski 2016r.</li>
+                    <li><img src="~/IMG/mvc_logo.png" style="align-content:flex-end" height="100"/></li>
+                </ul>
         </footer>
     </div>
 

@@ -22,3 +22,21 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.logo {
+  position:absolute;
+  z-index: 0;
+
+  left: 20px;
+  top: 5px;
+  height: 100px;
+  width: 100px;
+}
+
+#footer-left li {
+  margin:10px;
+  display:inline-table;
+  justify-content:center
+  list-style:none;
+  max-height:50px;
+}
