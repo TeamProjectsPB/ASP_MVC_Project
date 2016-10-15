@@ -6,18 +6,28 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
+        <li><a class="btn btn-default navbar-toggle" href="@Url.Action("Register","Account")"> ( + ) Dodaj Ogłoszenie </a></li>
         <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            <div class="dropdown">
+                <button class="btn btn-default dropdown" type="button" data-toggle="dropdown" style="margin-top:15px">
+                    @Html.ActionLink("Witaj " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Wyloguj...</a></li>
+                    <li><a >Moje Ogłoszenia</a></li>
+                    <li><a>Obserwowane Ogłoszenia</a></li>
+                </ul>
+            </div>
         </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        
     </ul>
     }
 }
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Zarejestruj", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li><img src="~/IMG/loginicon.png" height="35" style="padding-top:5px"/></li>
-        <li>@Html.ActionLink("Zaloguj", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li><a class="btn btn-default navbar-toggle" href="@Url.Action("Register","Account")" > ( + ) Dodaj Ogłoszenie </a></li>
+        <li><img src="~/IMG/loginicon.png" height="35" style="margin-top:15px"/></li>
+        <li style="margin-top:10px">@Html.ActionLink("Mój geek_ad", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }
