@@ -36,11 +36,20 @@
         @RenderBody()
         <hr />
         <footer>
-                <ul id="footer-left">
-                    <li><img src="~/IMG/pb_logo.jpg" style="align-content:flex-start" height="100" /></li>
-                    <li>&copy; @DateTime.Now.Year - Projekt zrealizowany przez Marcin Kozikowski i Marcin Januszewski 2016r.</li>
-                    <li><img src="~/IMG/mvc_logo.png" style="align-content:flex-end" height="100"/></li>
-                </ul>
+            <div class="row">
+                <div class="col-md-3">
+                    <p>
+                        <img src="~/IMG/pb_logo.jpg" style="align-content:flex-start" height="100" />
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p>&copy; @DateTime.Now.Year - Projekt zrealizowany na zaliczenie przedmiotu Programowanie Aplikacji Webowych w ASP MVC przez Marcin Kozikowski i Marcin Januszewski 2016r.</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/IMG/mvc_logo.png" style="align-content:flex-end" height="100" />
+                </div>
+            </div>
+                
         </footer>
     </div>
 

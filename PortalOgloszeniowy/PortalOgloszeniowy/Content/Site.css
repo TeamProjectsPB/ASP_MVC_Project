@@ -40,3 +40,10 @@ textarea {
   list-style:none;
   max-height:50px;
 }
+
+.borderless table {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
