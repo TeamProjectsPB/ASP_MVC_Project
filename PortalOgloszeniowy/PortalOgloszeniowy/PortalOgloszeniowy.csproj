@@ -217,6 +217,7 @@
     <Content Include="IMG\loginicon.png" />
     <Content Include="IMG\logo.png" />
     <Content Include="IMG\mvc_logo.png" />
+    <Content Include="IMG\NoImageAvailable.jpg" />
     <Content Include="IMG\pb_logo.jpg" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
@@ -271,6 +272,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_AdvertismentPreview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
