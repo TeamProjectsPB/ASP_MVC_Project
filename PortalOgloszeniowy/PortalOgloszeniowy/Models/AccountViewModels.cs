@@ -6,7 +6,8 @@ namespace PortalOgloszeniowy.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailRequired")]
         [Display(ResourceType =typeof(Resources.Global),Name ="Email")]
         public string Email { get; set; }
     }
@@ -26,15 +27,17 @@ namespace PortalOgloszeniowy.Models
 
     public class VerifyCodeViewModel
     {
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "ProviderRequired")]
         public string Provider { get; set; }
 
-        [Required]
-        [Display(Name = "Code")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "CodeRequired")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Code")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "RememberBrowser")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }
@@ -42,61 +45,74 @@ namespace PortalOgloszeniowy.Models
 
     public class ForgotViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailRequired")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailRequired")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
+        [EmailAddress(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailValidator")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordRequired")]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "RememberMe")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailRequired")]
+        [EmailAddress(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailValidator")]
+        [Display(ResourceType = typeof(Resources.Global), Name="Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordRequired")]
+        //[StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "ConfirmPassword")]
+        [Compare("Password", ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PasswordCompareFailed")]
         public string ConfirmPassword { get; set; }
     }
 
     public class ResetPasswordViewModel
     {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailRequired")]
+        [EmailAddress(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailValidator")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordRequired")]
+        [StringLength(100, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
@@ -105,9 +121,11 @@ namespace PortalOgloszeniowy.Models
 
     public class ForgotPasswordViewModel
     {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailRequired")]
+        [EmailAddress(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "EmailValidator")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
         public string Email { get; set; }
     }
 }

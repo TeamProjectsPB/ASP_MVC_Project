@@ -88,6 +88,24 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kod.
+        /// </summary>
+        public static string Code {
+            get {
+                return ResourceManager.GetString("Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pole kod jest wymagane..
+        /// </summary>
+        public static string CodeRequired {
+            get {
+                return ResourceManager.GetString("CodeRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Potwierdź hasło.
         /// </summary>
         public static string ConfirmPassword {
@@ -120,6 +138,24 @@ namespace PortalOgloszeniowy.Resources {
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pole e-mail jest wymagane..
+        /// </summary>
+        public static string EmailRequired {
+            get {
+                return ResourceManager.GetString("EmailRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Błędny adres e-mail..
+        /// </summary>
+        public static string EmailValidator {
+            get {
+                return ResourceManager.GetString("EmailValidator", resourceCulture);
             }
         }
         
@@ -169,6 +205,51 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hasło i potwierdzenie nie pasują do siebie..
+        /// </summary>
+        public static string PasswordCompareFailed {
+            get {
+                return ResourceManager.GetString("PasswordCompareFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} musi mieć minimum {2} znaków..
+        /// </summary>
+        public static string PasswordMinLenght {
+            get {
+                return ResourceManager.GetString("PasswordMinLenght", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pole hasło jest wymagane..
+        /// </summary>
+        public static string PasswordRequired {
+            get {
+                return ResourceManager.GetString("PasswordRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dostawca.
+        /// </summary>
+        public static string Provider {
+            get {
+                return ResourceManager.GetString("Provider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pole dostawca jest wymagane..
+        /// </summary>
+        public static string ProviderRequired {
+            get {
+                return ResourceManager.GetString("ProviderRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rejestracja.
         /// </summary>
         public static string Register {
@@ -183,6 +264,24 @@ namespace PortalOgloszeniowy.Resources {
         public static string RegisterInfo {
             get {
                 return ResourceManager.GetString("RegisterInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zapamiętaj przeglądarkę.
+        /// </summary>
+        public static string RememberBrowser {
+            get {
+                return ResourceManager.GetString("RememberBrowser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zapamiętaj mnie.
+        /// </summary>
+        public static string RememberMe {
+            get {
+                return ResourceManager.GetString("RememberMe", resourceCulture);
             }
         }
     }
