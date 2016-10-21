@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 
@@ -25,6 +27,20 @@ namespace PortalOgloszeniowy.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        public ActionResult Change(String newLanguage)
+        {
+            if (newLanguage != null)
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(newLanguage);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(newLanguage);
+            }
+            HttpCookie cookie = new HttpCookie("_language");
+            cookie.Value = newLanguage;
+            Response.Cookies.Add(cookie);
+
+            //return View("Index");
+            return Redirect(HttpContext.Request.UrlReferrer.AbsoluteUri);
         }
     }
 }

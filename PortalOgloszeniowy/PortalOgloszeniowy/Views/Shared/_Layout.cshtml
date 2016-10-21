@@ -24,7 +24,7 @@
             <div class="navbar-collapse collapse">
                 <img src="~/IMG/logo.png" class="logo" />
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink(PortalOgloszeniowy.Resources.Global.About, "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -39,16 +39,20 @@
             <div class="row">
                 <div class="col-md-3">
                     <p>
-                        <img src="~/IMG/pb_logo.jpg" style="align-content:flex-start" height="100" />
+                        <img src="~/IMG/pb_logo.jpg" style="align-content: flex-start" height="100"/>
                     </p>
                 </div>
                 <div class="col-md-6">
                     <p>&copy; @DateTime.Now.Year - Projekt zrealizowany na zaliczenie przedmiotu Programowanie Aplikacji Webowych w ASP MVC przez Marcin Kozikowski i Marcin Januszewski 2016r.</p>
                 </div>
                 <div class="col-md-3">
-                    <img src="~/IMG/mvc_logo.png" style="align-content:flex-end" height="100" />
+                    <img src="~/IMG/mvc_logo.png" style="align-content: flex-end" height="100"/>
                 </div>
             </div>
+            <ul>
+                <li>@Html.ActionLink("English", "Change", "Home", new { newLanguage = "en"}, null)</li>
+                <li>@Html.ActionLink("Polish", "Change", "Home", new { newLanguage = "pl" }, null)</li>
+            </ul>
                 
         </footer>
     </div>
