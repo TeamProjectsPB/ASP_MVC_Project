@@ -126,6 +126,9 @@
   <data name="AddAdvert" xml:space="preserve">
     <value>( + ) Dodaj Ogłoszenie</value>
   </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
   <data name="Code" xml:space="preserve">
     <value>Kod</value>
   </data>
@@ -162,6 +165,9 @@
   <data name="NewAccount" xml:space="preserve">
     <value>Tworzenie nowego konta</value>
   </data>
+  <data name="NewestAds" xml:space="preserve">
+    <value>Najnowsze ogłoszenia</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Hasło</value>
   </data>
@@ -191,5 +197,11 @@
   </data>
   <data name="RememberMe" xml:space="preserve">
     <value>Zapamiętaj mnie</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Wyszukaj</value>
+  </data>
+  <data name="TopAds" xml:space="preserve">
+    <value>Najpopularniejsze ogłoszenia</value>
   </data>
 </root>

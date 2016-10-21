@@ -88,6 +88,15 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kategorie.
+        /// </summary>
+        public static string Category {
+            get {
+                return ResourceManager.GetString("Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kod.
         /// </summary>
         public static string Code {
@@ -196,6 +205,15 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Najnowsze ogłoszenia.
+        /// </summary>
+        public static string NewestAds {
+            get {
+                return ResourceManager.GetString("NewestAds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hasło.
         /// </summary>
         public static string Password {
@@ -282,6 +300,24 @@ namespace PortalOgloszeniowy.Resources {
         public static string RememberMe {
             get {
                 return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wyszukaj.
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Najpopularniejsze ogłoszenia.
+        /// </summary>
+        public static string TopAds {
+            get {
+                return ResourceManager.GetString("TopAds", resourceCulture);
             }
         }
     }
