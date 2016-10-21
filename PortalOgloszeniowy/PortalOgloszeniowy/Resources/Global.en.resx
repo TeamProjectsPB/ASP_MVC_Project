@@ -118,15 +118,97 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>About us.</value>
+    <value>About</value>
   </data>
   <data name="AboutInfo" xml:space="preserve">
-    <value>Use this area to provide additional information.</value>
+    <value>Addition information</value>
+  </data>
+  <data name="AddAdvert" xml:space="preserve">
+    <value>( + ) Add new add</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="ConfirmPasswordNew" xml:space="preserve">
+    <value>Confirm new Password</value>
   </data>
   <data name="Contact" xml:space="preserve">
-    <value>Contact us.</value>
+    <value>Contatct</value>
+  </data>
+  <data name="CreateNewAccountBtn" xml:space="preserve">
+    <value>Create Account</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailValidator" xml:space="preserve">
+    <value>Invalid adres e-mail.</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>Field {0} is required</value>
+  </data>
+  <data name="FooterInfo" xml:space="preserve">
+    <value>Project was made to credit classes  Programowanie Aplikacji Webowych w ASP MVC by Marcin Kozikowski i Marcin Januszewski 2016r.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Global_Designer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>global.designer.cs;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="MyAccountBtn" xml:space="preserve">
+    <value>My geek_ad</value>
+  </data>
+  <data name="NewAccount" xml:space="preserve">
+    <value>Create new account</value>
+  </data>
+  <data name="NewestAds" xml:space="preserve">
+    <value>Newest Ads</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordCompareFailed" xml:space="preserve">
+    <value>Password and Confirmation are not the same.</value>
+  </data>
+  <data name="PasswordCurrent" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="PasswordDataType" xml:space="preserve">
+    <value>Password must have at least one special character, minimum one small char ('a'-'z'), minimum large char ('A'-'Z').</value>
+  </data>
+  <data name="PasswordMinLenght" xml:space="preserve">
+    <value>{0} must have at least  {2} chars.</value>
+  </data>
+  <data name="PasswordNew" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
   </data>
   <data name="RegisterInfo" xml:space="preserve">
     <value>Register as a new user.</value>
+  </data>
+  <data name="RememberBrowser" xml:space="preserve">
+    <value>Remember browser</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="TopAds" xml:space="preserve">
+    <value>Top Ads</value>
   </data>
 </root>
