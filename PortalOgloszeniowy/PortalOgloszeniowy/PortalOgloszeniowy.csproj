@@ -224,11 +224,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="IMG\BritishFlag.png" />
     <Content Include="IMG\loginicon.png" />
     <Content Include="IMG\logo.png" />
     <Content Include="IMG\mvc_logo.png" />
     <Content Include="IMG\NoImageAvailable.jpg" />
     <Content Include="IMG\pb_logo.jpg" />
+    <Content Include="IMG\polishFlag.jpg" />
+    <Content Include="IMG\russiaFlag.jpg" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />

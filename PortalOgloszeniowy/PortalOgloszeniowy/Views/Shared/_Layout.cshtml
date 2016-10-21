@@ -23,10 +23,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <img src="~/IMG/logo.png" class="logo" />
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink(PortalOgloszeniowy.Resources.Global.About, "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+                @*<a href=@Url.Action("ChangeEN","Home")><img src="~/IMG/BritishFlag.png" height="30: style="margin-top:15px"/></a>
+                <a href=@Url.Action("ChangePL", "Home")><img src="~/IMG/polishFlag.jpg" height="30" style="margin-top:15px"/></a>
+                <a href=@Url.Action("ChangeRU", "Home")><img src="~/IMG/russiaFlag.jpg" height="30" style="margin-top:15px" /></a>*@
+                <a href='@Url.Action("Change", "Home", new {newLanguage = "pl"})'>
+                    <img src="~/IMG/polishFlag.jpg"  style="height:30px;margin-top:15px"/>
+                </a>
+                <a href='@Url.Action("Change", "Home", new {newLanguage = "en"})'>
+                    <img src="~/IMG/BritishFlag.png"  style="height:30px;margin-top:15px"/>
+                </a>
+                <a href='@Url.Action("Change", "Home", new {newLanguage = "ru"})'>
+                    <img src="~/IMG/russiaFlag.jpg" style="height:30px;margin-top:15px"/>
+                </a>
                 @Html.Partial("_LoginPartial")
             </div>
             
@@ -49,10 +57,6 @@
                     <img src="~/IMG/mvc_logo.png" style="align-content: flex-end" height="100"/>
                 </div>
             </div>
-            <ul>
-                <li>@Html.ActionLink("English", "Change", "Home", new { newLanguage = "en"}, null)</li>
-                <li>@Html.ActionLink("Polish", "Change", "Home", new { newLanguage = "pl" }, null)</li>
-            </ul>
                 
         </footer>
     </div>
