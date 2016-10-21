@@ -17,5 +17,22 @@ namespace PortalOgloszeniowy
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            HttpCookie cookie = HttpContext.Current.Request.Cookies["_language"];
+            if (cookie != null && cookie.Value != null)
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture =
+                    System.Globalization.CultureInfo.CreateSpecificCulture(cookie.Value);
+                System.Threading.Thread.CurrentThread.CurrentUICulture =
+                    new System.Globalization.CultureInfo(cookie.Value);
+            }
+            else
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("pl");
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("pl");
+            }
+        }
     }
 }
