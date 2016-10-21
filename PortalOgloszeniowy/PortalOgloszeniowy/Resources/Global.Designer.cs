@@ -106,20 +106,20 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pole kod jest wymagane..
-        /// </summary>
-        public static string CodeRequired {
-            get {
-                return ResourceManager.GetString("CodeRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Potwierdź hasło.
         /// </summary>
         public static string ConfirmPassword {
             get {
                 return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Potwierdź nowe hasło.
+        /// </summary>
+        public static string ConfirmPasswordNew {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordNew", resourceCulture);
             }
         }
         
@@ -151,20 +151,20 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pole e-mail jest wymagane..
-        /// </summary>
-        public static string EmailRequired {
-            get {
-                return ResourceManager.GetString("EmailRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Błędny adres e-mail..
         /// </summary>
         public static string EmailValidator {
             get {
                 return ResourceManager.GetString("EmailValidator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pole {0} jest wymagane..
+        /// </summary>
+        public static string FieldRequired {
+            get {
+                return ResourceManager.GetString("FieldRequired", resourceCulture);
             }
         }
         
@@ -232,6 +232,24 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aktualne hasło.
+        /// </summary>
+        public static string PasswordCurrent {
+            get {
+                return ResourceManager.GetString("PasswordCurrent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hasła muszą mieć przynajmniej jeden znak specjalny, przynajmniej jeden mały znak (&apos;a&apos;-&apos;z&apos;), przynajmniej jeden duży znak (&apos;A&apos;-&apos;Z&apos;)..
+        /// </summary>
+        public static string PasswordDataType {
+            get {
+                return ResourceManager.GetString("PasswordDataType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} musi mieć minimum {2} znaków..
         /// </summary>
         public static string PasswordMinLenght {
@@ -241,11 +259,11 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pole hasło jest wymagane..
+        ///   Looks up a localized string similar to Nowe hasło.
         /// </summary>
-        public static string PasswordRequired {
+        public static string PasswordNew {
             get {
-                return ResourceManager.GetString("PasswordRequired", resourceCulture);
+                return ResourceManager.GetString("PasswordNew", resourceCulture);
             }
         }
         
@@ -255,15 +273,6 @@ namespace PortalOgloszeniowy.Resources {
         public static string Provider {
             get {
                 return ResourceManager.GetString("Provider", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pole dostawca jest wymagane..
-        /// </summary>
-        public static string ProviderRequired {
-            get {
-                return ResourceManager.GetString("ProviderRequired", resourceCulture);
             }
         }
         

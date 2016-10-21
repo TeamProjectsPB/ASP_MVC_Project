@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using PortalOgloszeniowy.Resources;
 
 namespace PortalOgloszeniowy.Models
 {
@@ -27,40 +28,51 @@ namespace PortalOgloszeniowy.Models
 
     public class SetPasswordViewModel
     {
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "FieldRequired")]
+        [StringLength(100, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "PasswordNew")]
         public string NewPassword { get; set; }
 
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "ConfirmPasswordNew")]
+        [Compare("NewPassword", ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PasswordCompareFailed")]
         public string ConfirmPassword { get; set; }
     }
 
     public class ChangePasswordViewModel
     {
-        [Required]
-        [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "FieldRequired")]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "PasswordCurrent")]
         public string OldPassword { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "FieldRequired")]
+        [StringLength(100, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "PasswordNew")]
         public string NewPassword { get; set; }
 
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+           ErrorMessageResourceName = "PasswordDataType")]
+        [Display(ResourceType = typeof(Resources.Global), Name = "ConfirmPasswordNew")]
+        [Compare("NewPassword", ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PasswordCompareFailed")]
         public string ConfirmPassword { get; set; }
     }
 
     public class AddPhoneNumberViewModel
     {
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "FieldRequired")]
         [Phone]
         [Display(Name = "Phone Number")]
         public string Number { get; set; }
@@ -68,11 +80,13 @@ namespace PortalOgloszeniowy.Models
 
     public class VerifyPhoneNumberViewModel
     {
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "FieldRequired")]
         [Display(Name = "Code")]
         public string Code { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Global),
+             ErrorMessageResourceName = "FieldRequired")]
         [Phone]
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
