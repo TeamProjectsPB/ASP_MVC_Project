@@ -7,7 +7,7 @@ namespace PortalOgloszeniowy.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "EmailRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [Display(ResourceType =typeof(Resources.Global),Name ="Email")]
         public string Email { get; set; }
     }
@@ -28,11 +28,11 @@ namespace PortalOgloszeniowy.Models
     public class VerifyCodeViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "ProviderRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         public string Provider { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "CodeRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Code")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
@@ -46,7 +46,7 @@ namespace PortalOgloszeniowy.Models
     public class ForgotViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "EmailRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
         public string Email { get; set; }
     }
@@ -54,14 +54,14 @@ namespace PortalOgloszeniowy.Models
     public class LoginViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "EmailRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
         [EmailAddress(ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "EmailValidator")]
         public string Email { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "PasswordRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "PasswordDataType")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
@@ -74,15 +74,14 @@ namespace PortalOgloszeniowy.Models
     public class RegisterViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "EmailRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [EmailAddress(ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "EmailValidator")]
         [Display(ResourceType = typeof(Resources.Global), Name="Email")]
         public string Email { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "PasswordRequired")]
-        //[StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+            ErrorMessageResourceName = "FieldRequired")]
         [StringLength(100, ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
         [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
@@ -100,14 +99,14 @@ namespace PortalOgloszeniowy.Models
     public class ResetPasswordViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "EmailRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [EmailAddress(ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "EmailValidator")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Email")]
         public string Email { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "PasswordRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [StringLength(100, ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
         [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
@@ -127,7 +126,7 @@ namespace PortalOgloszeniowy.Models
     public class ForgotPasswordViewModel
     {
         [Required(ErrorMessageResourceType = typeof(Global),
-            ErrorMessageResourceName = "EmailRequired")]
+            ErrorMessageResourceName = "FieldRequired")]
         [EmailAddress(ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "EmailValidator")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Email")]

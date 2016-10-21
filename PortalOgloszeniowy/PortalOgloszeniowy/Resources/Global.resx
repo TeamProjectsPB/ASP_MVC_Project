@@ -129,11 +129,11 @@
   <data name="Code" xml:space="preserve">
     <value>Kod</value>
   </data>
-  <data name="CodeRequired" xml:space="preserve">
-    <value>Pole kod jest wymagane.</value>
-  </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Potwierdź hasło</value>
+  </data>
+  <data name="ConfirmPasswordNew" xml:space="preserve">
+    <value>Potwierdź nowe hasło</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Skontaktuj się.</value>
@@ -144,11 +144,11 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="EmailRequired" xml:space="preserve">
-    <value>Pole e-mail jest wymagane.</value>
-  </data>
   <data name="EmailValidator" xml:space="preserve">
     <value>Błędny adres e-mail.</value>
+  </data>
+  <data name="FieldRequired" xml:space="preserve">
+    <value>Pole {0} jest wymagane.</value>
   </data>
   <data name="FooterInfo" xml:space="preserve">
     <value>Projekt zrealizowany na zaliczenie przedmiotu Programowanie Aplikacji Webowych w ASP MVC przez Marcin Kozikowski i Marcin Januszewski 2016r.</value>
@@ -168,20 +168,20 @@
   <data name="PasswordCompareFailed" xml:space="preserve">
     <value>Hasło i potwierdzenie nie pasują do siebie.</value>
   </data>
+  <data name="PasswordCurrent" xml:space="preserve">
+    <value>Aktualne hasło</value>
+  </data>
   <data name="PasswordDataType" xml:space="preserve">
     <value>Hasła muszą mieć przynajmniej jeden znak specjalny, przynajmniej jeden mały znak ('a'-'z'), przynajmniej jeden duży znak ('A'-'Z').</value>
   </data>
   <data name="PasswordMinLenght" xml:space="preserve">
     <value>{0} musi mieć minimum {2} znaków.</value>
   </data>
-  <data name="PasswordRequired" xml:space="preserve">
-    <value>Pole hasło jest wymagane.</value>
+  <data name="PasswordNew" xml:space="preserve">
+    <value>Nowe hasło</value>
   </data>
   <data name="Provider" xml:space="preserve">
     <value>Dostawca</value>
-  </data>
-  <data name="ProviderRequired" xml:space="preserve">
-    <value>Pole dostawca jest wymagane.</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Rejestracja</value>
