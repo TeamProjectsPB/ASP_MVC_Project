@@ -214,6 +214,15 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hasła muszą mieć przynajmniej jeden znak specjalny, przynajmniej jeden mały znak (&apos;a&apos;-&apos;z&apos;), przynajmniej jeden duży znak (&apos;A&apos;-&apos;Z&apos;)..
+        /// </summary>
+        public static string PasswordDataType {
+            get {
+                return ResourceManager.GetString("PasswordDataType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} musi mieć minimum {2} znaków..
         /// </summary>
         public static string PasswordMinLenght {

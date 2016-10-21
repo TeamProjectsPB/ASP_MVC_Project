@@ -11,7 +11,7 @@ namespace PortalOgloszeniowy.Models
         [Display(ResourceType =typeof(Resources.Global),Name ="Email")]
         public string Email { get; set; }
     }
-
+    
     public class ExternalLoginListViewModel
     {
         public string ReturnUrl { get; set; }
@@ -62,7 +62,8 @@ namespace PortalOgloszeniowy.Models
 
         [Required(ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "PasswordRequired")]
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         public string Password { get; set; }
 
@@ -84,11 +85,13 @@ namespace PortalOgloszeniowy.Models
         //[StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [StringLength(100, ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         public string Password { get; set; }
 
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
         [Display(ResourceType = typeof(Resources.Global), Name = "ConfirmPassword")]
         [Compare("Password", ErrorMessageResourceType = typeof(Global), ErrorMessageResourceName = "PasswordCompareFailed")]
         public string ConfirmPassword { get; set; }
@@ -107,11 +110,13 @@ namespace PortalOgloszeniowy.Models
             ErrorMessageResourceName = "PasswordRequired")]
         [StringLength(100, ErrorMessageResourceType = typeof(Global),
             ErrorMessageResourceName = "PasswordMinLenght", MinimumLength = 6)]
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         public string Password { get; set; }
 
-        [DataType(DataType.Password)]
+        [DataType(DataType.Password, ErrorMessageResourceType = typeof(Global),
+            ErrorMessageResourceName = "PasswordDataType")]
         [Display(ResourceType = typeof(Resources.Global), Name = "Password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }

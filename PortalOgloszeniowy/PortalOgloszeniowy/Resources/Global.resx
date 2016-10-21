@@ -168,6 +168,9 @@
   <data name="PasswordCompareFailed" xml:space="preserve">
     <value>Hasło i potwierdzenie nie pasują do siebie.</value>
   </data>
+  <data name="PasswordDataType" xml:space="preserve">
+    <value>Hasła muszą mieć przynajmniej jeden znak specjalny, przynajmniej jeden mały znak ('a'-'z'), przynajmniej jeden duży znak ('A'-'Z').</value>
+  </data>
   <data name="PasswordMinLenght" xml:space="preserve">
     <value>{0} musi mieć minimum {2} znaków.</value>
   </data>
