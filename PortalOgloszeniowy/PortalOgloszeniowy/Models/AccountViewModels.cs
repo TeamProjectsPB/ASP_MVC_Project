@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PortalOgloszeniowy.Resources;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace PortalOgloszeniowy.Models
@@ -6,7 +7,7 @@ namespace PortalOgloszeniowy.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(ResourceType =typeof(Resources.Global),Name ="Email")]
         public string Email { get; set; }
     }
 

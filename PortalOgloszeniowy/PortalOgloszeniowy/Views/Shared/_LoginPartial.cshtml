@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
+@using PortalOgloszeniowy.Resources
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
@@ -10,7 +11,7 @@
         <li>
             <div class="dropdown">
                 <button class="btn btn-default dropdown" type="button" data-toggle="dropdown" style="margin-top:15px">
-                    @Html.ActionLink("Witaj " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    @Html.ActionLink(Global.Hello + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
                 </button>
                 <ul class="dropdown-menu">
                     <li><a href="javascript:document.getElementById('logoutForm').submit()">Wyloguj...</a></li>
@@ -26,8 +27,8 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a class="btn btn-default navbar-toggle" href="@Url.Action("Register","Account")" > ( + ) Dodaj Ogłoszenie </a></li>
+        <li><a class="btn btn-default navbar-toggle" href="@Url.Action("Register","Account")" > @Global.AddAdvert </a></li>
         <li><img src="~/IMG/loginicon.png" height="35" style="margin-top:15px"/></li>
-        <li style="margin-top:10px">@Html.ActionLink("Mój geek_ad", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li style="margin-top:10px">@Html.ActionLink(Global.MyAccountBtn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }

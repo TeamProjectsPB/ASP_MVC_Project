@@ -79,11 +79,101 @@ namespace PortalOgloszeniowy.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ( + ) Dodaj Ogłoszenie.
+        /// </summary>
+        public static string AddAdvert {
+            get {
+                return ResourceManager.GetString("AddAdvert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Potwierdź hasło.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Skontaktuj się..
         /// </summary>
         public static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Utwórz konto.
+        /// </summary>
+        public static string CreateNewAccountBtn {
+            get {
+                return ResourceManager.GetString("CreateNewAccountBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Projekt zrealizowany na zaliczenie przedmiotu Programowanie Aplikacji Webowych w ASP MVC przez Marcin Kozikowski i Marcin Januszewski 2016r..
+        /// </summary>
+        public static string FooterInfo {
+            get {
+                return ResourceManager.GetString("FooterInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Witaj.
+        /// </summary>
+        public static string Hello {
+            get {
+                return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mój geek_ad.
+        /// </summary>
+        public static string MyAccountBtn {
+            get {
+                return ResourceManager.GetString("MyAccountBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tworzenie nowego konta.
+        /// </summary>
+        public static string NewAccount {
+            get {
+                return ResourceManager.GetString("NewAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hasło.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rejestracja.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
             }
         }
         
