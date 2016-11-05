@@ -220,6 +220,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-PortalOgloszeniowy-20161014085245.mdf" />
+    <Content Include="App_Data\aspnet-PortalOgloszeniowy-20161014085245_log.ldf">
+      <DependentUpon>aspnet-PortalOgloszeniowy-20161014085245.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
