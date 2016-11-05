@@ -14,6 +14,13 @@
             </th>
             <th>
                 Elektronika
+                <!--To tylko na probe czy pobierze z bazy danych -->
+
+               @foreach(var m in ViewData.Model)
+               {
+                   @m.Name;
+               }
+
             </th>
             <th>
                 Antyki

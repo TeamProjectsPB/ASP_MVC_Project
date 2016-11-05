@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PortalOgloszeniowy.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -10,8 +12,16 @@ namespace PortalOgloszeniowy.Controllers
 {
     public class HomeController : Controller
     {
+        Entities1 db;
+
+        public HomeController()
+        {
+            db = new Entities1(); ;
+        }
+
         public ActionResult Index()
         {
+            ViewData.Model = db.Category.ToList();
             return View();
         }
 
