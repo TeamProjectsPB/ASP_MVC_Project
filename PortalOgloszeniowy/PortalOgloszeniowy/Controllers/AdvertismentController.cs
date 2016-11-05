@@ -11,7 +11,7 @@ namespace PortalOgloszeniowy.Controllers
         // GET: Advertisment
         public ActionResult Index()
         {
-            return View("Index");
+            return View("Advertisment");
         }
     }
 }
