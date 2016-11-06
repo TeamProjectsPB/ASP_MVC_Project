@@ -48,15 +48,15 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
           <Property Name="CityId" Type="int" Nullable="false" />
-          <Property Name="Visits" Type="int" Nullable="false" />
+          <Property Name="Visits" Type="int" />
           <Property Name="IsPremium" Type="bit" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
           <Property Name="Pub_Time" Type="date" Nullable="false" />
           <Property Name="Exp_Time" Type="date" Nullable="false" />
-          <Property Name="Adv_Desc_Id" Type="int" Nullable="false" />
+          <Property Name="Adv_Desc_Id" Type="int" />
         </EntityType>
         <EntityType Name="AdvFile">
           <Key>
@@ -87,7 +87,7 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="ClaimType" Type="nvarchar(max)" />
           <Property Name="ClaimValue" Type="nvarchar(max)" />
         </EntityType>
@@ -99,21 +99,21 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           </Key>
           <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
         </EntityType>
         <EntityType Name="AspNetUserRoles">
           <Key>
             <PropertyRef Name="UserId" />
             <PropertyRef Name="RoleId" />
           </Key>
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
         </EntityType>
         <EntityType Name="AspNetUsers">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="256" />
           <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
           <Property Name="PasswordHash" Type="nvarchar(max)" />
@@ -154,7 +154,7 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RegionId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nchar" MaxLength="15" Nullable="false" />
         </EntityType>
@@ -169,8 +169,8 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="15" Nullable="false" />
         </EntityType>
         <EntityType Name="Report">
           <Key>
@@ -231,7 +231,7 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Advertisment_ToTable_2">
-          <End Role="AdvDesc" Type="Self.AdvDesc" Multiplicity="1" />
+          <End Role="AdvDesc" Type="Self.AdvDesc" Multiplicity="0..1" />
           <End Role="Advertisment" Type="Self.Advertisment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdvDesc">
@@ -482,15 +482,15 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <Property Name="CityId" Type="Int32" Nullable="false" />
-          <Property Name="Visits" Type="Int32" Nullable="false" />
+          <Property Name="Visits" Type="Int32" />
           <Property Name="IsPremium" Type="Boolean" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
           <Property Name="Pub_Time" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Exp_Time" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Adv_Desc_Id" Type="Int32" Nullable="false" />
+          <Property Name="Adv_Desc_Id" Type="Int32" />
           <NavigationProperty Name="AdvDesc" Relationship="Self.FK_Advertisment_ToTable_2" FromRole="Advertisment" ToRole="AdvDesc" />
           <NavigationProperty Name="City" Relationship="Self.FK_Advertisment_ToTable" FromRole="Advertisment" ToRole="City" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Advertisment_ToTable_1" FromRole="Advertisment" ToRole="Category" />
@@ -528,7 +528,7 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
@@ -541,14 +541,14 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           </Key>
           <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
         </EntityType>
         <EntityType Name="AspNetUsers">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
           <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
           <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -596,7 +596,7 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RegionId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Advertisment" Relationship="Self.FK_Advertisment_ToTable" FromRole="City" ToRole="Advertisment" />
@@ -614,8 +614,8 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="15" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="City" Relationship="Self.FK_City_ToTable" FromRole="Region" ToRole="City" />
         </EntityType>
         <EntityType Name="Report">
@@ -629,7 +629,7 @@ warning 6002: The table/view 'aspnet-PortalOgloszeniowy-20161014085245.dbo.AdvDe
           <Property Name="IsHandled" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_Advertisment_ToTable_2">
-          <End Role="AdvDesc" Type="Self.AdvDesc" Multiplicity="1" />
+          <End Role="AdvDesc" Type="Self.AdvDesc" Multiplicity="0..1" />
           <End Role="Advertisment" Type="Self.Advertisment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdvDesc">

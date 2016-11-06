@@ -15,15 +15,15 @@ namespace PortalOgloszeniowy.Models
     public partial class Advertisment
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int CategoryId { get; set; }
         public int CityId { get; set; }
-        public int Visits { get; set; }
+        public Nullable<int> Visits { get; set; }
         public bool IsPremium { get; set; }
         public bool IsActive { get; set; }
         public System.DateTime Pub_Time { get; set; }
         public System.DateTime Exp_Time { get; set; }
-        public int Adv_Desc_Id { get; set; }
+        public Nullable<int> Adv_Desc_Id { get; set; }
     
         public virtual AdvDesc AdvDesc { get; set; }
         public virtual City City { get; set; }

@@ -198,9 +198,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdvertismentController.cs" />
+    <Compile Include="Controllers\AdvertismentsController.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RegionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -378,8 +380,22 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_AdvertismentPreview.cshtml" />
-    <Content Include="Views\Advertisment\Index.cshtml" />
-    <Content Include="Views\Advertisment\Advertisment.cshtml" />
+    <Content Include="Views\Advertisments\Index1.cshtml" />
+    <Content Include="Views\Advertisments\Create.cshtml" />
+    <Content Include="Views\Advertisments\Delete.cshtml" />
+    <Content Include="Views\Advertisments\Details.cshtml" />
+    <Content Include="Views\Advertisments\Edit.cshtml" />
+    <Content Include="Views\Advertisments\Index.cshtml" />
+    <Content Include="Views\Regions\Create.cshtml" />
+    <Content Include="Views\Regions\Delete.cshtml" />
+    <Content Include="Views\Regions\Details.cshtml" />
+    <Content Include="Views\Regions\Edit.cshtml" />
+    <Content Include="Views\Regions\Index.cshtml" />
+    <Content Include="Views\Cities\Create.cshtml" />
+    <Content Include="Views\Cities\Delete.cshtml" />
+    <Content Include="Views\Cities\Details.cshtml" />
+    <Content Include="Views\Cities\Edit.cshtml" />
+    <Content Include="Views\Cities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Language\" />

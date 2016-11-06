@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f902db747b7e407d958f8cc85f604e43" Name="Diagram1" ZoomLevel="55">
-        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="1.875" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="3f4e52a11dcf42b885ede39ce8375eed" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.AdminMessage" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AdvDesc" Width="1.5" PointX="12.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Advertisment" Width="1.5" PointX="12.625" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AdvFile" Width="1.5" PointX="14.625" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AdvPhotos" Width="1.5" PointX="14.625" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AspNetRoles" Width="1.5" PointX="3.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AspNetUserClaims" Width="1.5" PointX="3.5" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AspNetUserLogins" Width="1.5" PointX="5.375" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.AspNetUsers" Width="1.5" PointX="5.375" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AdvDesc" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Advertisment" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AdvFile" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AdvPhotos" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetRoles" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserClaims" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserLogins" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUsers" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Attribute" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.AttributeValue" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="10.75" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.City" Width="1.5" PointX="10.375" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Keywords" Width="1.5" PointX="13" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Region" Width="1.5" PointX="10.375" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.City" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Keywords" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Region" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Report" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_Advertisment_ToTable_2" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_AdvFile_ToTable" ManuallyRouted="false" />
