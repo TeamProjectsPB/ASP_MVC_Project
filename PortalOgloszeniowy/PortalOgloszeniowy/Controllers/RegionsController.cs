@@ -12,7 +12,7 @@ namespace PortalOgloszeniowy.Controllers
 {
     public class RegionsController : Controller
     {
-        private Entities1 db = new Entities1();
+        private Entities2 db = new Entities2();
 
         // GET: Regions
         public ActionResult Index()

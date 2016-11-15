@@ -14,6 +14,15 @@ namespace PortalOgloszeniowy.Models
     
     public partial class Advertisment
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Advertisment()
+        {
+            this.AdvFile = new HashSet<AdvFile>();
+            this.AdvPhotos = new HashSet<AdvPhotos>();
+            this.Report = new HashSet<Report>();
+            this.Keywords = new HashSet<Keywords>();
+        }
+    
         public int Id { get; set; }
         public string UserId { get; set; }
         public int CategoryId { get; set; }
@@ -23,11 +32,19 @@ namespace PortalOgloszeniowy.Models
         public bool IsActive { get; set; }
         public System.DateTime Pub_Time { get; set; }
         public System.DateTime Exp_Time { get; set; }
-        public Nullable<int> Adv_Desc_Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
     
-        public virtual AdvDesc AdvDesc { get; set; }
         public virtual City City { get; set; }
         public virtual Category Category { get; set; }
         public virtual AspNetUsers AspNetUsers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AdvFile> AdvFile { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AdvPhotos> AdvPhotos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Report> Report { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Keywords> Keywords { get; set; }
     }
 }

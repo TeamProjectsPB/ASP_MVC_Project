@@ -15,9 +15,9 @@ namespace PortalOgloszeniowy.Models
     public partial class AdvPhotos
     {
         public int Id { get; set; }
-        public int AdvDescId { get; set; }
+        public int AdvertiseId { get; set; }
         public byte[] Photo { get; set; }
     
-        public virtual AdvDesc AdvDesc { get; set; }
+        public virtual Advertisment Advertisment { get; set; }
     }
 }

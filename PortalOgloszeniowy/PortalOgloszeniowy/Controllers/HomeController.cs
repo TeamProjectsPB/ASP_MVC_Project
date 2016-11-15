@@ -12,11 +12,11 @@ namespace PortalOgloszeniowy.Controllers
 {
     public class HomeController : Controller
     {
-        Entities1 db;
+        Entities2 db;
 
         public HomeController()
         {
-            db = new Entities1(); ;
+            db = new Entities2(); ;
         }
 
         public ActionResult Index()

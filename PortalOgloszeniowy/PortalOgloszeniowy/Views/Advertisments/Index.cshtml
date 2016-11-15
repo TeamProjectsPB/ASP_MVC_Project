@@ -28,7 +28,10 @@
             @Html.DisplayNameFor(model => model.Exp_Time)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AdvDesc.Title)
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.City.Name)
@@ -60,7 +63,10 @@
             @Html.DisplayFor(modelItem => item.Exp_Time)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AdvDesc.Title)
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.City.Name)

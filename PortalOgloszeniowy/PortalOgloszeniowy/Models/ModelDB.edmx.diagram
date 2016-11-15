@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e70efee5e24a4759ab80318cee16dac7" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="ModelDB.C__MigrationHistory" Width="1.5" PointX="13.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AdminMessage" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.Advertisment" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AdvFile" Width="1.5" PointX="7.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AdvPhotos" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AspNetRoles" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AspNetUserClaims" Width="1.5" PointX="5.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AspNetUserLogins" Width="1.5" PointX="5.25" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AspNetUsers" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.Attribute" Width="1.5" PointX="5.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.AttributeValue" Width="1.5" PointX="7.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.Category" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.City" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.Keywords" Width="1.5" PointX="7.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.Region" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelDB.Report" Width="1.5" PointX="10.5" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="ModelDB.FK_AdminMessage_ToTable_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Advertisment_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Advertisment_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Advertisment_ToTable_3" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_AdvFile_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_AdvPhotos_ToTable_Advertisment" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Report_ToTable_Advertisment" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Report_ToTable_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Attribute_ToTable_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_AttributeValue_ToTable_Atribute" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_Category_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.FK_City_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="ModelDB.AdvDescKey" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

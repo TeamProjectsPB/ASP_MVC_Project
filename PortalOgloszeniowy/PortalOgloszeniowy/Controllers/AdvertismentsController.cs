@@ -12,12 +12,12 @@ namespace PortalOgloszeniowy.Controllers
 {
     public class AdvertismentsController : Controller
     {
-        private Entities1 db = new Entities1();
+        private Entities2 db = new Entities2();
 
         // GET: Advertisments
         public ActionResult Index()
         {
-            var advertisment = db.Advertisment.Include(a => a.AdvDesc).Include(a => a.City).Include(a => a.Category).Include(a => a.AspNetUsers);
+            var advertisment = db.Advertisment.Include(a => a.City).Include(a => a.Category).Include(a => a.AspNetUsers);
             return View(advertisment.ToList());
         }
 
@@ -39,7 +39,6 @@ namespace PortalOgloszeniowy.Controllers
         // GET: Advertisments/Create
         public ActionResult Create()
         {
-            ViewBag.Adv_Desc_Id = new SelectList(db.AdvDesc, "Id", "Title");
             ViewBag.CityId = new SelectList(db.City, "Id", "Name");
             ViewBag.CategoryId = new SelectList(db.Category, "Id", "Name");
             ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email");
@@ -51,7 +50,7 @@ namespace PortalOgloszeniowy.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,UserId,CategoryId,CityId,Visits,IsPremium,IsActive,Pub_Time,Exp_Time,Adv_Desc_Id")] Advertisment advertisment)
+        public ActionResult Create([Bind(Include = "Id,UserId,CategoryId,CityId,Visits,IsPremium,IsActive,Pub_Time,Exp_Time,Title,Description")] Advertisment advertisment)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +59,6 @@ namespace PortalOgloszeniowy.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Adv_Desc_Id = new SelectList(db.AdvDesc, "Id", "Title", advertisment.Adv_Desc_Id);
             ViewBag.CityId = new SelectList(db.City, "Id", "Name", advertisment.CityId);
             ViewBag.CategoryId = new SelectList(db.Category, "Id", "Name", advertisment.CategoryId);
             ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email", advertisment.UserId);
@@ -79,7 +77,6 @@ namespace PortalOgloszeniowy.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Adv_Desc_Id = new SelectList(db.AdvDesc, "Id", "Title", advertisment.Adv_Desc_Id);
             ViewBag.CityId = new SelectList(db.City, "Id", "Name", advertisment.CityId);
             ViewBag.CategoryId = new SelectList(db.Category, "Id", "Name", advertisment.CategoryId);
             ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email", advertisment.UserId);
@@ -91,7 +88,7 @@ namespace PortalOgloszeniowy.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,UserId,CategoryId,CityId,Visits,IsPremium,IsActive,Pub_Time,Exp_Time,Adv_Desc_Id")] Advertisment advertisment)
+        public ActionResult Edit([Bind(Include = "Id,UserId,CategoryId,CityId,Visits,IsPremium,IsActive,Pub_Time,Exp_Time,Title,Description")] Advertisment advertisment)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +96,6 @@ namespace PortalOgloszeniowy.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Adv_Desc_Id = new SelectList(db.AdvDesc, "Id", "Title", advertisment.Adv_Desc_Id);
             ViewBag.CityId = new SelectList(db.City, "Id", "Name", advertisment.CityId);
             ViewBag.CategoryId = new SelectList(db.Category, "Id", "Name", advertisment.CategoryId);
             ViewBag.UserId = new SelectList(db.AspNetUsers, "Id", "Email", advertisment.UserId);

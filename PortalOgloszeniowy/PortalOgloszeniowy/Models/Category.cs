@@ -18,15 +18,18 @@ namespace PortalOgloszeniowy.Models
         public Category()
         {
             this.Advertisment = new HashSet<Advertisment>();
+            this.Attribute = new HashSet<Attribute>();
             this.Category1 = new HashSet<Category>();
         }
     
         public int Id { get; set; }
-        public int SubCategoryId { get; set; }
+        public int RootCategoryId { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Advertisment> Advertisment { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Attribute> Attribute { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Category> Category1 { get; set; }
         public virtual Category Category2 { get; set; }
