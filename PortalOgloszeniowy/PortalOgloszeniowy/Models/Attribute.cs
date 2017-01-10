@@ -17,15 +17,17 @@ namespace PortalOgloszeniowy.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Attribute()
         {
-            this.AttributeValue = new HashSet<AttributeValue>();
+            this.AdvAttribute = new HashSet<AdvAttribute>();
+            this.CategoryAttribute = new HashSet<CategoryAttribute>();
         }
     
         public int Id { get; set; }
-        public int CategoryId { get; set; }
         public string Name { get; set; }
+        public string Type { get; set; }
     
-        public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AttributeValue> AttributeValue { get; set; }
+        public virtual ICollection<AdvAttribute> AdvAttribute { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CategoryAttribute> CategoryAttribute { get; set; }
     }
 }

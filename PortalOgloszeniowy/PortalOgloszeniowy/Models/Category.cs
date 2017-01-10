@@ -18,8 +18,8 @@ namespace PortalOgloszeniowy.Models
         public Category()
         {
             this.Advertisment = new HashSet<Advertisment>();
-            this.Attribute = new HashSet<Attribute>();
             this.Category1 = new HashSet<Category>();
+            this.CategoryAttribute = new HashSet<CategoryAttribute>();
         }
     
         public int Id { get; set; }
@@ -29,9 +29,9 @@ namespace PortalOgloszeniowy.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Advertisment> Advertisment { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Attribute> Attribute { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Category> Category1 { get; set; }
         public virtual Category Category2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CategoryAttribute> CategoryAttribute { get; set; }
     }
 }

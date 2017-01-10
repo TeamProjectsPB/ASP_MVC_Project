@@ -17,10 +17,11 @@ namespace PortalOgloszeniowy.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Advertisment()
         {
+            this.AdvAttribute = new HashSet<AdvAttribute>();
             this.AdvFile = new HashSet<AdvFile>();
             this.AdvPhotos = new HashSet<AdvPhotos>();
-            this.Report = new HashSet<Report>();
             this.Keywords = new HashSet<Keywords>();
+            this.Report = new HashSet<Report>();
         }
     
         public int Id { get; set; }
@@ -35,16 +36,18 @@ namespace PortalOgloszeniowy.Models
         public string Title { get; set; }
         public string Description { get; set; }
     
-        public virtual City City { get; set; }
-        public virtual Category Category { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AdvAttribute> AdvAttribute { get; set; }
         public virtual AspNetUsers AspNetUsers { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AdvFile> AdvFile { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AdvPhotos> AdvPhotos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Report> Report { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Keywords> Keywords { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Report> Report { get; set; }
     }
 }

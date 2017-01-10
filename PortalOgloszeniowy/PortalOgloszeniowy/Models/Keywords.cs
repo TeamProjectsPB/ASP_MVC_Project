@@ -14,16 +14,10 @@ namespace PortalOgloszeniowy.Models
     
     public partial class Keywords
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Keywords()
-        {
-            this.Advertisment = new HashSet<Advertisment>();
-        }
-    
         public int Id { get; set; }
+        public int AdvId { get; set; }
         public string Keyword { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Advertisment> Advertisment { get; set; }
+        public virtual Advertisment Advertisment { get; set; }
     }
 }
